@@ -1,0 +1,116 @@
+
+                                            DRIVER HEAD POSITION DETECTION USING ML ALGORITHMS
+
+
+Abstract : 
+
+* Evaluation of driving performance is of utmost importance in order to reduce road accident rate.
+
+* Since driving ability includes visual-spatial and operational attention, among others, head pose estimation of the driver is a crucial indicator of driving performance.
+
+* In this project we estimate the position of the head in terms of yaw angle(looking left,frontal,looking right) by using a set of geometric features computed from just three representative facial keypoints, namely
+ the center of the eyes and the nose tip.
+
+* Because we are using reduced set of features, the low computational cost of the method and its robustness makes feasible to integrate it in massive consume devices as a real time application.
+
+
+References :
+
+ * Single image-based head pose estimation with spherical parametrization and 3D morphing (Year - 2020)
+
+  * This paper was written by Hui Yuan,Mengyu Li,and Junhui Hou.
+
+  * They propesed a geometry based algorithm for accurately estimating the head pose from a single 2D face image at a very low computational cost.
+
+  * Specifically, the rectangular coordinates of only four non-coplanar feature points from a predefined 3D facial model as well as the corresponding 
+    ones automatically/manually extracted from a 2D face image are first normalized to exclude the effect of external factors (i.e., scale factor and translation parameters). Then, the four normalized 3D 
+    feature points are represented in spherical coordinates with reference to the uniquely determined sphere by themselves, which are further iteratively refined via 3D morphing. 
+
+  * Due to the spherical parameterization, the coordinates of feature points could be morphed along all the three directions effectively.Finally, the rotation matrix indicating the head pose is obtained by minimizing the Euclidean distance between the normalized 2D feature points and the
+    2D re-projections of morphed 3D feature points.
+
+
+* Infrared head pose estimation with multi-scales feature fusion on the IRHP database for human attention recognition (Year -2020)
+
+  * This paper was written by Hai Liu,Xiang Wang,Wei Zhang,Zhaoli Zhang,and You-Fu Li.
+
+  * They used the Infrared images because they bear unique advantages of being still effective under visible scenarios, which are resistance to illumination changing and strong penetration.
+
+  * In this paper, they established a first-of-its-kind infrared head pose (IRHP) database and propose a novel convolutional neural network architecture
+    IRHP-Net on the IRHP database. The IRHP database contains 145 kinds of IR head pose images of subjects, and benchmark evaluations are conducted on our database by the facial features-based standard HPE 
+    classification methods to prove the usability and effectiveness of IRHP database. 
+
+  * To extract the adaptive features for the IR images, a novel multi-scale feature fusion descriptor is developed in the proposed 
+    IRHP-Net model. Quantitative assessments of the proposed method on the IRHP images demonstrate the significant improvements over the traditional methods. The new proposed IRHP-Net model can be utilized in human 
+    attention recognition and intelligent driving assistant system.
+
+* Robust Driver Head Pose Estimation in Naturalistic Conditions from Point-Cloud Data (Year - 2020)
+
+  * This paper was written by Tiancheng Hu, Sumit Jha and Carlos Busso. 
+
+  * This paper presented a novel point-cloud based algorithm to estimate the head pose of a driver from a single depth camera.
+ 
+  * The proposed algorithms achieved promising performances, outperforming the state-of-the-art baselines OpenFace2.0 and FAN, which rely on regular RGB images.
+
+  * The improvement in performance is especially clear onframes with large rotations. For automotive applications such as detecting driver distraction. Our method is far more
+    suitable for this purpose than the baselines. Furthermore, the proposed algorithm can also work in cases with very low illumination or even during the night. In these scenarios,
+    RGB based approaches cannot be used.
+
+* A Deep Coarse-to-Fine Network for Head Pose Estimation from Synthetic Data ( Year - 2019) 
+
+  *  This paper was written by Yujia Wang,Wei Liang,Jianbing Shen,and Yude Jia.
+
+  *  They Estimated the head pose with a Coarse-to-Fine neural network.
+
+  *  The network is achieved by joint learning, and thus are computationally efficient.
+
+  *  The generated head pose dataset contains 310k images.
+
+  * Designed a rendering pipeline to synthesize realistic head images with annotations.
+
+
+
+* Dataset Description
+
+
+In this problem, we are given images sequences of subjects while driving in real scenarios.
+
+It is composed of 606 samples of 640◊480 pixels each, acquired over different days from 4 drivers (2 women and 2 men) with several facial features like glasses and beard.
+By taking the help of dataset and using ML Algorithms, we have to develop a model That will help in finding the face position (XF, YF, WF, HF) of the driver for the
+Unknown inputs.
+
+Dataset is multivariate ( consisting of two or more than two variables )
+The variables used to describe the image of driver are:
+
+* Subject = Driver number
+
+* Label = This describes the class of the driver.
+ There are 3 classes in this dataset
+ Class 1 - looking-right
+ Class 2 - frontal
+ Class 3 - looking-left
+
+* Angle = This describes the head angle
+
+ The first class is the looking-right class and contains the head angles between -45Âº and -30Âº.
+
+ The second one is the frontal class and contains the head angles between -15Âº and 15Âº.
+
+ The last one is the looking-left class and contains the head angles between 30Âº and 45Âº.
+
+* [xF yF wF hF] = face position
+
+* [xRE yRE] = right eye position
+
+* [xLE yL] = left eye position
+
+* [xN yN] = Nose position
+
+* [xRM yRM] = right corner of mouth
+
+* [xLM yLM] = left corner of mouth
+
+
+
+
+
